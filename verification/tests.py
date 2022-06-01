@@ -317,5 +317,15 @@ army_2.add_units(Lancer, 4)
 battle = Battle()''',
                      test="battle.fight(army_1, army_2)",
                      answer=True)
+                ],
+    "17. Battle": [
+        prepare_test(middle_code='''army_warrior = Army()
+army_lancer = Army()
+army_warrior.add_units(Warrior,2)
+army_lancer.add_units(Lancer,1)
+army_lancer.add_units(Warrior, 1)
+battle = Battle()''',
+                     test="battle.fight(army_warrior, army_lancer)",
+                     answer=False)
                 ]
 }
